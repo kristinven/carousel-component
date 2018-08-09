@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        div.wrapper{
+            width: 500px;
+            height: 300px;
+            margin: 0 auto 30px;
+        }
+        div.wrapper2{
+            width: 600px;
+            height: 400px;
+            margin: 0 auto 30px;
+        }
+        h3{
+            line-height: 50px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>生成轮播图1：</h3>
+    <div class="wrapper"></div>
+    <h3>生成轮播图2：</h3>
+    <div class="wrapper2"></div>
+    <script src="./createTurnPage.js"></script>
+    <script>
+        var wrapper = document.getElementsByClassName('wrapper')[0];
+        var wrapper2 = document.getElementsByClassName('wrapper2')[0];
+        var source = ['./src/shop1.jpg', './src/shop2.jpg', './src/shop3.jpg', './src/shop4.jpg', './src/shop1.jpg'];
+        wrapper.createTurnPage(source);
+        wrapper2.createTurnPage(source);
+    </script>
+</body>
+</html>
